@@ -32,9 +32,16 @@ public class Posts { //실제 DB 테이블과 매칭될 클래스
         this.author = author;
     }
 
+    public void update(String title, String content){
+        this.title = title;
+        this.content = content;
+    }
+
+
 
     //Entity 클래스에서는 절대 Setter 메소드 만들지 않음.
     //해당 필드의 값 변경 필요시 명확히 그 목적과 의도 나타낼 수 있는 메소드 추가함.
     //그럼 db에 삽입 방법? -> 생성자 통해 최종값 채운 후 db에 insert.
     //이 책에서는 생성자 대신 @Builder 통해 제공되는 빌더클래스 사용
+
 }
