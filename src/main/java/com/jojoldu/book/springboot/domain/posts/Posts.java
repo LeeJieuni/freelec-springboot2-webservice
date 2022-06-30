@@ -1,6 +1,7 @@
 package com.jojoldu.book.springboot.domain.posts;
 
 import com.jayway.jsonpath.internal.function.text.Length;
+import com.jojoldu.book.springboot.domain.BaseTimeEntity;
 import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -10,7 +11,7 @@ import javax.persistence.*;
 @Getter //클래스 내 모든 필드의 getter 메소드 자동생성
 @NoArgsConstructor //기본생성자 자동추가 =  public Posts(){}
 @Entity //테이블과 링크될 클래스임을 나타냄. 기본값으로 클래스의 카멜케이스 이름을 언더스코어네이밍으로 테이블 이름 매칭함. SalesManager.java -> sales_manager table
-public class Posts { //실제 DB 테이블과 매칭될 클래스
+public class Posts extends BaseTimeEntity { //실제 DB 테이블과 매칭될 클래스
     //JPA를 사용하면 DB데이터에 작업할 경우 실제 쿼리를 날리기보다는 이 Entity 클래스 수정을 통해 작업.
 
     @Id //해당 테이블의 pk필드
